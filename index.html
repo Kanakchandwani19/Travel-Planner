@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desh Darshan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Arial', sans-serif;
+    background-color: #090202;
+    color: #333;
+    
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background-image: url("leaf-4631370_1280.jpg");
+    background-size: cover;
+    color:white;
+    padding: 20px 0;
+}
+
+header .logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f4a261;
+    border-bottom: 2px solid black;
+}
+
+.hero {
+    background: url("travelll.avif") no-repeat center center/cover;
+    color: black;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #f4a261;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e76f51;
+}
+
+.destinations {
+    padding: 60px 0;
+    background-color:#fff;
+}
+
+.destinations h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.destination-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.destination {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.destination img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.destination p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.destination-link {
+    text-decoration: none;
+    color: #f4a261;
+    font-weight: bold;
+}
+
+.itinerary {
+    padding: 60px 0;
+    background-color: #f9fafb;
+}
+
+.itinerary form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.itinerary .form-group {
+    width: 100%;
+    max-width: 400px;
+}
+
+.itinerary label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.itinerary select,
+.itinerary input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    background-color: #f4a261;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e76f51;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Desh Darshan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#itinerary">Itinerary</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Plan Your Dream Vacation</h1>
+            <p>Discover the best destinations and create your perfect itinerary.</p>
+            <a href="#destinations" class="cta-button">Explore Destinations</a>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="destination-list">
+                <div class="destination">
+                    <img src="odisha.jpg" alt="Odisha">
+                    <h3>Odisha</h3>
+                    <p>The stunning architecture, history, dialects, vibrant art, music and the land of lord Jagannath.</p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="rajasthan.jpg" alt="Rajasthan">
+                    <h3>Rajasthan</h3>
+                    <p> Famous for its culture, festivals, palaces, forts, textiles, folk dance, desserts and cuisine. </p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="uk.jpg" alt="Uttarakhand">
+                    <h3>Uttarakhand</h3>
+                    <p> Known as the "Land of Gods" because of its many holy places, has pristine lakes and snow-blanketed slopes.</p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="maharashtra.jpg" alt="Maharashtra">
+                    <h3>Maharashtra</h3>
+                    <p> India's largest commercial and industrial centres, renowned for its rich heritage, vibrant culture, and contributions to literature, arts, and cinema.</p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="kerala.jpg" alt="Kerala">
+                    <h3>Kerala</h3>
+                    <p>Lush green backwaters, pristine beaches, and rich cultural heritage, often called "God's Own Country" due to its natural beauty. </p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="sikkhim.jpg" alt="Sikkhim">
+                    <h3>Sikkhim</h3>
+                    <p>Popular for the number of monasteries it houses. It is one of the fastest growing, multiethnic and multilingual Indian state.</p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="hyderabad.jpg" alt="Hyderabad">
+                    <h3>Hyderabad</h3>
+                    <p> Known as the City of Pearls and Known for its historic legacy and cultural diversity.</p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="punjab.jpg" alt="Punjab">
+                    <h3>Punjab</h3>
+                    <p>The 'Land of Five Rivers,' renowned for its rich culture, vibrant music, and the Golden Temple in Amritsar.</p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+                <div class="destination">
+                    <img src="himachal.jpg" alt="Himachal Pradesh">
+                    <h3>Himachal Pradesh</h3>
+                    <p>A state that is known for its beautiful landscapes, its rich culture, and its friendly people. </p>
+                    <a href="#" class="destination-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="itinerary" class="itinerary">
+        <div class="container">
+            <h2>Create Your Itinerary</h2>
+            <form class="itinerary-form">
+                <div class="form-group">
+                    <label for="destination">Choose a Destination:</label>
+                    <select id="destination" name="destination">
+                        <option value="Odisha">Odisha</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Sikkhim">Sikkhim</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dates">Travel Dates:</label>
+                    <input type="date" id="start-date" name="start-date">
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+                <button type="submit" class="cta-button">Plan My Trip</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Desh Darshan. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
